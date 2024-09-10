@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap');
+
+body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: .5fr repeat(2, 1fr);
+    height: 100vh;
+    justify-items: center;
+    font-family: "Cabin Sketch", sans-serif;
+    background-color: #feff9c;
+}
+
 .gameGrid {
     width: 400px;
     height: 400px;
@@ -5,6 +17,7 @@
     border: 2px solid black;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    margin: 0px 2rem
 }
 
 .gameSquare {
@@ -12,4 +25,64 @@
     display: grid;
     place-content: center;
     font-size: xx-large;
+}
+
+.highlight {
+    background-color: #feffda;
+
+}
+
+.winGrid {
+    width: 400px;
+    height: 400px;
+    border: 2px solid black;
+    position: absolute;
+    z-index: -1;
+}
+
+.results {
+    text-align: center;
+    grid-row: 2;
+    grid-column: 3;
+    place-content: center;
+    margin-right: auto;
+}
+
+.gameContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.headerText {
+    grid-row: 1;
+    grid-column: 2;
+    place-self: center;
+    text-align: center;
+}
+
+.newGame {
+    grid-column: 1;
+    grid-row: 2;
+    place-self: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-left: auto;
+}
+
+button {
+    font-family: inherit;
+    font-weight: bold;
+}
+
+.headerText {
+    font-weight: bolder;
+    font-size: 4rem;
+    place-self: center;
 }
